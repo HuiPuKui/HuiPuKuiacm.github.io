@@ -115,3 +115,17 @@ body {
     font-size: 30px;
     color: gray;
 }
+
+.shuatioj {
+    padding-left: 800px;
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
