@@ -115,10 +115,11 @@ body {
     font-size: 30px;
     color: gray;
 }
-
+/* À¢Ã‚oj */
 .shuatioj {
-    padding-left: 800px;
+    padding-left: 700px;
     font-size: 40px;
+    font-family: KaiTi;
 }
 
 a {
@@ -129,3 +130,4 @@ a {
 a:hover {
     color: gray;
 }
+
