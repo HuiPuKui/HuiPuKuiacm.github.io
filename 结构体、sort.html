@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="GB18030">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【无标题】</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1><a id="sort_0"></a>结构体、sort</h1>
+<h3><a id="_1"></a>结构体定义</h3>
+<pre><code class="prism language-cpp"><span class="token keyword">struct</span> 结构体标签
+<span class="token punctuation">{</span>
+	变量类型 变量名<span class="token punctuation">;</span>
+	变量类型 变量名<span class="token punctuation">;</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	变量类型 变量名<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>结构体变量<span class="token punctuation">;</span>
+</code></pre>
+<h5><a id="_12"></a>例如</h5>
+<pre><code class="prism language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">int</span> year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>time<span class="token punctuation">;</span> <span class="token comment">// 结构体变量</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">node</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">int</span> year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>time<span class="token punctuation">;</span> <span class="token comment">// 结构体数组</span>
+</code></pre>
+<h3><a id="_24"></a>对结构体排序</h3>
+<h5><a id="_25"></a>例：以年为关键字从小到大排序</h5>
+<pre><code class="prism language-cpp"><span class="token comment">// 重载运算符写法</span>
+<span class="token keyword">struct</span> <span class="token class-name">node</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">int</span> year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">;</span>
+	<span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">const</span> node <span class="token operator">&amp;</span>x<span class="token punctuation">)</span> <span class="token keyword">const</span>
+	<span class="token punctuation">{</span>
+		<span class="token keyword">return</span> year <span class="token operator">&lt;</span> x<span class="token punctuation">.</span>year<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>time<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 函数写法</span>
+<span class="token keyword">bool</span> <span class="token function">cmp</span><span class="token punctuation">(</span>node x<span class="token punctuation">,</span> node y<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">return</span> x<span class="token punctuation">.</span>year <span class="token operator">&lt;</span> y<span class="token punctuation">.</span>year<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</body>
+
+</html>
